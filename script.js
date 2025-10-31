@@ -13,3 +13,11 @@ function createGrid(row, column) {
 
 };
 createGrid(16, 16);
+
+// Add eventListeners for grid-items to add hover effect
+const gridItems= document.querySelectorAll('.grid-item');
+gridItems.forEach(gridItem => {
+    gridItem.addEventListener('mouseover', () => {
+        gridItem.style.background= 'black'
+    });
+});
