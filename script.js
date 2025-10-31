@@ -1,10 +1,10 @@
 // Create dynamic grid using JS with CSS grid (inspired by StackOverflow)
 function createGrid(row, column) {
     const gridContainer= document.querySelector(".container");
-
+    // Use CSS variables to easily change values as needed
     gridContainer.style.setProperty('--grid-row', row);
     gridContainer.style.setProperty('--grid-column', column);
-
+    //Add cells as needed based on the grid size
     let cells;
     for (let i=0; i < (row * column); i++) {
         cells= document.createElement('div');
