@@ -1,16 +1,32 @@
 :root {
-    --grid-row: 1;
-    --grid-column: 1;
+  --num-cols: 1;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
 }
 
 .container {
-    display: grid;
-    grid-template-rows: repeat(var(--grid-row), 1fr);
-    grid-template-columns: repeat(var(--grid-column), 1fr);
-    grid-gap: 0.1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 960px;
+    height: 800px;
+    scroll-behavior: auto;
+
 }
 
 .grid-item {
     border: 1px black solid;
-    padding: 10px;;
+    padding: 10px;
+    flex-basis: calc(100% / var(--num-cols));
+    flex-grow: 1;
+    box-sizing: border-box;
+}
+
+.size {
+  margin: 0 auto;
 }
