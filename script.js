@@ -10,7 +10,7 @@ function createGrid(row, column) {
     }
 
 };
-
+// Get the dynamic grid size
 const gridSize= prompt("Choose size as number (like 30 for example)");
 let rows= gridSize;
 let columns= gridSize;
@@ -23,6 +23,7 @@ createGrid(rows, columns);
 
 const min= 1;
 const max= 255;
+
 // Add eventListeners for grid-items to add hover effect
 const gridItems= document.querySelectorAll('.grid-item');
 gridItems.forEach(gridItem => {
@@ -34,6 +35,7 @@ gridItems.forEach(gridItem => {
     });
 });
 
+// Change size of square by reloading page through a button
 const changeSize= document.querySelector(".size");
 changeSize.addEventListener('click', () => {
     window.location.reload();

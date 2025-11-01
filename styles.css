@@ -14,15 +14,17 @@ body {
     flex-wrap: wrap;
     margin: 0 auto;
     width: 960px;
-    height: 800px;
-    scroll-behavior: auto;
+    height: 600px;
+    overflow-y: auto;
 
 }
 
 .grid-item {
     border: 1px black solid;
+    min-height: 0;
     padding: 10px;
     flex-basis: calc(100% / var(--num-cols));
+    flex-shrink: 1;
     flex-grow: 1;
     box-sizing: border-box;
 }
